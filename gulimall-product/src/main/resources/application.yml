@@ -1,0 +1,16 @@
+#数据源相关
+spring:
+  datasource:
+    username: root
+    password: 123321
+    url: jdbc:mysql://192.168.33.10:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#整合mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml # classpath*不止我项目的类路径，连我引用的jar包也一起扫。
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 10000
